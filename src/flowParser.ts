@@ -236,10 +236,10 @@ function getNodeDefStr(flowMap: FlowMap): Promise<string> {
 }
 
 function getVariablesMd(vars :any[]): string {
-	let vStr = "## Variables\n|Name|Datatype|Collection|Input|Output|\n|-|-|-|-|-|\n";
+	let vStr = "## Variables\n|Name|Datatype|Collection|Input|Output|Description\n|-|-|-|-|-|-|\n";
 	if (!vars) vars = [];
 	for (const v of vars) {
-		vStr += "|" + v.name + "|" + v.dataType + "|" + v.isCollection + "|" + v.isInput + "|" + v.isOutput + "|\n";
+		vStr += "|" + v.name + "|" + v.dataType + "|" + v.isCollection + "|" + v.isInput + "|" + v.isOutput + "|" + v.Description + "|\n";
 	}
 	return vStr;
 }
